@@ -90,8 +90,6 @@ h1{
 /* ///////// */
 #game-board{
     margin: 2em 0;
-}
-#squares{
     width: 100%;
     max-width: 800px;
     display: grid;
@@ -103,6 +101,8 @@ h1{
     height: 150px;
     border: 2px solid #000;
     border-radius: 10px;
+    font-size: 5rem;
+    line-height: 150px;
 }
 .square:hover{
     cursor: pointer;
