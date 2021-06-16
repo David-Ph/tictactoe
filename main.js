@@ -75,14 +75,16 @@ const gameBoard = (function(){
     }
 
     function _resetGame(){
-        // ! temporary way to reset game
-        window.history.go();
-        // ! below way does not work
-        // ! because the other modules's gameBoard does not reset
-        // game.clickedSquares = 0;
-        // game.turn = 1;
-        // game.hasWinner = 0;
-        // init();
+        game.clickedSquares = 0;
+        game.hasWinner = 0;
+        _resetBoard();
+    }
+
+    function _resetBoard(){
+        board.forEach((square) => {
+            square.innerHTML = '';
+        })
+        gameStatus.innerHTML = "Let's Play!";
     }
 
     // call this at the end to initialize the game
